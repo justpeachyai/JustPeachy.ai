@@ -138,6 +138,11 @@ class Worker:
         print(f"Worker {self.name} hired and initialized. Version: {self.version}")
 
     def chat(self, worker_id, env_id, convo_id, msg):
-        # pass to action
-        # pass actio nto short term memory first
+        # get worker name, role from worker_id to determine action type and role
+        # pass to parser.py action = parser_input(user_message, talisha, content, convo_id, env_id)
+        # pass action to memory/shortTerm/queue shortTerm_prompt = queue_manager(action)
+        # pass prompt to memory/core.py final_prompt = memory(shortTerm_prompt, longTerm_prompt)
+        # pass final memory to decisions/processor.py final_action = processor(final_prompt)
+        # if final_action != worker_message, send action back to memory in loop until true
+        # return final_action (which will always be a worker_message)
         pass

@@ -5,6 +5,7 @@ This is the environment in which the worker (or workers) are observing. This can
 - Tool: a tool use
 - Skill: a skill use
 - Thought: an internal thought by the ai worker
+
 These actions can be completed by the following roles:
 - system: neither human or ai
 - user: human
@@ -18,6 +19,7 @@ Control Flow Class w/ Eviction Policy:
 - Defines the max space of the core memory (i.e. the max number of tokens)
 - defines the eviction process (i.e. core memory must be kept under 85% utilization)
 - Defines the summarization process, which is controlled by a small, fast ai agent
+
 -> (prompt will need editing and testing, use the enviroment not conversation) Your job is to summarize a history of previous messages in a conversation between an AI persona and a human.
 The conversation you are given is a from a fixed context window and may not be complete.
 Messages sent by the AI are marked with the 'assistant' role.

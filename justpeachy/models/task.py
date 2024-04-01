@@ -11,7 +11,12 @@ Task class includes the following attributes:
 - created_at: datetime
 - updated_at: datetime
 
-task.execute(max_iterations, approval):
+task.execute(max_iterations, approval, creator):
     max_iterations: signifies how many times or how long a task can repeat the loop before failure
     approval: BOOLEAN, TRUE by default, if FALSE then status automatically updated to COMPLETED
+    
+    task gets sent to actions/execute_task execute_task(task.self, creator)
+    return task has been started, please check for updates in the task manager
+    (task info gets sent to the message broker)
+
 """
